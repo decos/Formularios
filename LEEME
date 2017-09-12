@@ -1,9 +1,27 @@
 FORMULARIOS EN ANGULAR
 
-		INICIO DEL PROYECTO
+	INICIO DEL PROYECTO
 		
-			1. Añadir la referencia de bootstrap al proyecto
-				src/index.html
+		1. Añadir la referencia de bootstrap al proyecto
+			src/index.html
 
+	
+	CREACION DE COMPONENTES - APROXIMACION POR TEMPLATE Y DATA
 		
+		Recursos: https://getbootstrap.com/docs/4.0/components/forms/
 		
+		TEMPLATE: Se trabaja mas x el lado del html
+		DATA: Orientado a crearse del lado del codigo
+
+		1. Crear un directorio llamado *components y dentro crear dos componentes:
+			ng g c components/template -is
+			ng g c components/data -is
+
+		2. Importar el modulo *FormsModule al fichero *app.module
+			src/app/app.module.ts
+
+		3. Añadir la clase *main-container al fichero de estilos principal
+
+		4. Crear un div con la clase *main-container en la vista principal de la app
+		
+		5. Añadir el recurso adjunto (formulario) en la vista del componente template
