@@ -25,3 +25,8 @@ FORMULARIOS EN ANGULAR
 		4. Crear un div con la clase *main-container en la vista principal de la app
 		
 		5. Añadir el recurso adjunto (formulario) en la vista del componente template
+
+
+	TEMPLATE ngMODEL - ngSUBMIT - REFERENCIAS LOCALES A LOS ELEMENTO HTML
+	
+		1. 
