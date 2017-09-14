@@ -71,6 +71,56 @@ FORMULARIOS EN ANGULAR
 		7. Agregar el atributo *ngModel a los elementos: *apellido e *email
 
 		
+	TEMPLATE: OBTENIENDO LA INFORMACIÓN DEL FORMULARIO
+		
+		1. Añadir el atributo *ngForm al formulario
+			<form (ngSubmit)="guardar(forma)" #forma="ngForm" novalidate="">
+
+		2. En el componente *template añadir un parametro (forma) a la funcion *guardar
+			guardar( forma:any ){
+		
+		- Imprimirla en consola el parametro *forma
+
+		- Si el valor del campo *valid es igual a *true,  es porque ha pasado
+			la validación, sino algo falto en el formulario
+
+		3. Importar el paquete *ngForm al componente *template
+			import { NgForm } from '@angular/forms';
+			guardar( forma:NgForm ){
+
+		- Imprimir en consola
+			console.log("ngForm: ", forma);
+			console.log("Valor: ", forma.value);
+			 
+		4. Crear un objeto de prueba llamado *usuario
+
+		5. Agregar los corchetes o llaves cuadradas a los elementos de la vista
+			con el fin de precargar el usuario de prueba en el formulario
+
+		- Escuchar los cambios -> []
+		
+		- Emitir los cambios -> ()
+
+		- Imprimir en consola	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
