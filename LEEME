@@ -104,13 +104,36 @@ FORMULARIOS EN ANGULAR
 		- Imprimir en consola	
 
 
+	TEMPLATE: VALIDACIONES INDEPENDIENTES  Y CAMBIO DE ESTILO
 
+		1. Añadir la validación de *required al campo *apellido
 
+		2. Añadir un patron al campo *correo
+			pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
 
+		3. Colocar todos los atributos del objeto *usuario en nulo
 
+		4. Agregar un nuevo estilo al componente *template
+			src/app/components/template/template.component.ts
+			
+			styles: [`
+			      .ng-invalid.ng-touched:not(form) {
+				border: 1px solid red;
+			      }
+			    `]
 
+		5. Añadir dos *divs debajo del elemento *nombre
+			- Este campo es requerido
+			- Por lo menos 5 caracteres
 
+		6. Añadir la variable local al elemento *nombre en la vista
+			#nombre="ngModel"
+		
+		7. Añadir los condicionales a los *divs usando *ngIf
+			- *ngIf="nombre.errors?.required"
+			- *ngIf="nombre.errors?.minlength"
 
+		
 
 
 
