@@ -1,12 +1,12 @@
 <h4>Formularios <small>template</small></h4>
 <hr>
-<form (ngSubmit)="guardar(forma)" #forma="ngForm" novalidate="">
+<form [ngClass]="{'was-validated': forma.dirty }" (ngSubmit)="guardar(forma)" #forma="ngForm" novalidate="">
 
   <div>
 
     <div class="form-group row">
       <label class="col-2 col-form-label">Nombre</label>
-      <div class="col-8">
+      <div class="col-8" [ngClass]="{ 'text-danger': !nombre.valid && nombre.dirty , 'text-success': nombre.valid && nombre.dirty }">
 
         <input class="form-control"
                type="text"
@@ -19,17 +19,21 @@
       </div>
     </div>
 
-    <div *ngIf="nombre.errors?.required">
-      Este campo es requerido
-    </div>
+    <!--<div class="invalid-feedback">-->
+      <div *ngIf="nombre.errors?.required && nombre.dirty"
+            class="text-danger">
+        Este campo es requerido
+      </div>
 
-    <div *ngIf="nombre.errors?.minlength">
-      Por lo menos {{ nombre.errors.minlength.requiredLength }} caracteres
-    </div>
+      <div *ngIf="nombre.errors?.minlength && nombre.dirty"
+            class="text-danger">
+        Por lo menos {{ nombre.errors.minlength.requiredLength }} caracteres
+      </div>
+    <!--</div>-->
 
     <div class="form-group row">
       <label class="col-2 col-form-label">Apellido</label>
-      <div class="col-8">
+      <div class="col-8" [ngClass]="{ 'text-danger': !apellido.valid && apellido.dirty , 'text-success': apellido.valid && apellido.dirty }">
 
         <input class="form-control"
                type="text"
@@ -41,7 +45,8 @@
       </div>
     </div>
 
-    <div *ngIf="apellido.errors?.required">
+    <div *ngIf="apellido.errors?.required && apellido.dirty"
+          class="text-danger">
       Este campo es requerido
     </div>
 
@@ -49,7 +54,7 @@
 
   <div class="form-group row">
     <label class="col-2 col-form-label">Correo</label>
-    <div class="col-md-8">
+    <div class="col-md-8" [ngClass]="{ 'text-danger': !correo.valid && correo.dirty , 'text-success': correo.valid && correo.dirty }">
 
       <input class="form-control"
              type="email"
@@ -62,18 +67,22 @@
     </div>
   </div>
 
-  <div *ngIf="correo.errors?.required">
+  <div *ngIf="correo.errors?.required && correo.dirty"
+        class="text-danger">
     Este campo es requerido
   </div>
 
-  <div *ngIf="correo.errors?.pattern">
+  <div *ngIf="correo.errors?.pattern && correo.dirty"
+        class="text-danger">
     El campo no tiene formato de correo
   </div>
 
   <div class="form-group row">
     <label class="col-2 col-form-label">&nbsp;</label>
     <div class="input-group col-md-8">
-      <button type="submit" class="btn btn-outline-primary">
+      <button [disabled] = "!forma.valid"
+              type="submit"
+              class="btn btn-outline-primary">
         Guardar
       </button>
     </div>

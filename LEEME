@@ -142,10 +142,27 @@ FORMULARIOS EN ANGULAR
 			- *ngIf="correo.errors?.required"
 			- *ngIf="correo.errors?.pattern"
 
-
 	
-	
+	TEMPLATE: APLICANDO CLASES DEL BOOTSTRAP  PARA MOSTRAR ERRORES Y MENSAJES
+		
+		Recursos:
+			- https://getbootstrap.com/docs/4.0/components/forms/#validation
 
+		1. Agregar la clase *was-validated al iniciar el sa los datos al formulario
+			[ngClass]="{'was-validated': forma.dirty }"
+
+		2. Agregar la validacion en cada div, para que el mensaje aparesca al
+			ser modificado el elemento.
+			Ex:
+				*ngIf="nombre.errors?.required && nombre.dirty"
+           			 class="text-danger"
+	
+		3. Añadir una clase a los elementos para que se marque de verde o rojo
+			la caja de texto segun pase o no la validación
+			Ex:
+				ngClass]="{ 'text-danger': !nombre.valid && nombre.dirty , 						'text-success': nombre.valid && nombre.dirty }"
+
+		4. Comentar en el componente *template la linea *styles
 
 
 
