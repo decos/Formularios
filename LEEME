@@ -134,9 +134,17 @@ FORMULARIOS EN ANGULAR
 			- *ngIf="nombre.errors?.minlength"
 
 		
+	RESOLUCIÓN DE LA TAREA - VALIDACIONES
+
+		1. Añadir las siguientes condiciones
+
+			- *ngIf="apellido.errors?.required"
+			- *ngIf="correo.errors?.required"
+			- *ngIf="correo.errors?.pattern"
 
 
-
+	
+	
 
 
 
