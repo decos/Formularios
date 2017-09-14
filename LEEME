@@ -28,5 +28,70 @@ FORMULARIOS EN ANGULAR
 
 
 	TEMPLATE ngMODEL - ngSUBMIT - REFERENCIAS LOCALES A LOS ELEMENTO HTML
-	
-		1. 
+		
+		- Si utilizas el NgMODEL tmb necesitas poner la propiedad NAME
+
+		1. Importar el paquete *FormModule al modulo de la aplicacion y añadirlo 
+			a *imports
+			src/app/app.module.ts
+
+		- Solo por poner el ngModel, sucede lo siguiente:
+	 	
+			ng-untouched	: El usuario no ha tocado esa caja
+			ng-pristine	: Esta con su valor por defecto (Puede ser vacio)
+			ng-valid	: Esta pasando todas las reglas de validacion impuestas
+						a ese componente.
+
+		- Si se coloca un valor en la etiqueta de texto, sucede lo siguiente:
+			
+			ng-dirty	: Ya no esta pristine, ya cambio su valor
+		
+		- Despues de colocar el valor, le das clic en otro lado, sucede lo siguiente:
+			
+			ng-touched	: Se cambia cuando movamos el cursor a otro lado
+
+		2. Añadir el atributo required al elemento *nombre
+
+			ng-invalid 	: Ahora va requerir por lo menos un caracter
+
+		3. Quitar mensajes de HTML5, añadir a la etiqueta form lo siguiente:
+			<form novalidate="">
+
+		4. Añadir el atributo *minlength al elemento *nombre
+			minlength="5"
+			
+		- El atributo *ng-invalid se convierte a *ng-valid al cumplir todas las 			reglas de validacion.
+
+		5. Agregar el atributo *ngSubmit al formulario que apunte a la funcion *guardar
+			(ngSubmit)="guardar"
+
+		6. Crear la función guardar
+			src/app/components/template/template.component.ts
+
+		7. Agregar el atributo *ngModel a los elementos: *apellido e *email
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
