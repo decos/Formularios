@@ -164,9 +164,39 @@ FORMULARIOS EN ANGULAR
 
 		4. Comentar en el componente *template la linea *styles
 
+	
+	TEMPLATE: USO DE SELECTS, RADIO Y CHECKBOX
 
+		USO DE SELECTS
 
+		1. Crear un arreglo de objetos en el componente *template llamado *paises
 
+		2. Agregar al usuario en el componente *template un atributo llamado *pais
+
+		3. Añadir un elemento llamdo *pais debajo del elemento *correo en la vista
+
+		USO DE RADIOS
+	
+		- Recurso: 
+		https://getbootstrap.com/docs/4.0/components/forms/#checkboxes-and-radios
+			
+		{{  }} = Interpolacion
+		[ ] = Enlace a las propiedades		
+
+		1. Crear un arreglo de caracteres en el componente *template llamado *sexos
+
+		2. Agregar al usuario en el componente *template un atributo llamado *sexo
+
+		3. Añadir un elemento llamdo *sexo debajo del elemento *pais en la vista
+	
+		USO DE CHECKBOX
+	
+		- Recurso: 
+		https://getbootstrap.com/docs/4.0/components/forms/#checkboxes-and-radios
+
+		1. Agregar al usuario en el componente *template un atributo llamado *acepta
+
+		2. Añadir un elemento llamdo *acepta debajo del elemento *sexo en la vista
 
 
 
