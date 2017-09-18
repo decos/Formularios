@@ -199,8 +199,12 @@ FORMULARIOS EN ANGULAR
 		2. Añadir un elemento llamdo *acepta debajo del elemento *sexo en la vista
 
 
+	DATA: APROXIMACIÓN DE FORMULARIOS USANDO CÓDIGO
 
-
+		1. Copiar el código del formulario adjunto en la sección
+			src/app/components/data/data.component.html
+			
+	
 
 
 
