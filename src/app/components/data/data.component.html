@@ -1,6 +1,8 @@
 <h4>Formularios <small>data</small></h4>
 <hr>
-<form>
+<form [formGroup]="forma"
+      (ngSubmit)="guardarCambios()"
+      novalidate>
 
   <div>
 

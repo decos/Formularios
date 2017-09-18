@@ -204,13 +204,31 @@ FORMULARIOS EN ANGULAR
 		1. Copiar el código del formulario adjunto en la sección
 			src/app/components/data/data.component.html
 			
-	
+			
+	DATA: CREACIÓN DEL FORMULARIO - FormGroup
 
+		1. Modificar la vista principal de la aplicación para que llame al 
+			selector *app-data
+			src/app/app.component.html
 
+		2. Importar en el componente *data los siguientes paquetes
+			import { FormGroup, FormControl, Validator } from '@angular/forms';
 
+		3. Importar en el modulo principal de la aplicacion el parquete
+			*ReactiveFormsModule y colocarlo en *imports
+			src/app/app.module.ts
 
+		4. Codear en el constructor un *formGroup y la funcion *guardarCambios
+			src/app/components/data/data.component.ts				
 
+		5. Codear en la etiqueta *form los atributos *formGroup, *ngSubmit y 
+			*novalidate 
+			src/app/components/data/data.component.html
 
+		- novalidate : No realice ninguna validacion de HTML5
+		
+		- pending : Validacion asincrona que este pendiente de ejecutarse,
+				si no hay su valor es false.
 
 
 
