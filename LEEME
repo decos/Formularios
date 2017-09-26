@@ -248,8 +248,29 @@ FORMULARIOS EN ANGULAR
 
 		4. Imprimir en la vista *forma.valid para observar el cambio
 
+
+	DATA: CONTINUANDO CON LAS VALIDACIONES Y HTML
 		
+		1. Añadir dos divs despues del campo de texto *nombre que imprima los sgts
+			mensajes:
+
+			- El nombre es necesario.
+			- Por lo menos 3 caracteres.
 		
+		2. Añadir las siguientes validaciones en los divs:
+
+			- *ngIf="forma.controls['nombre'].errors?.required"
+			- *ngIf="forma.controls['nombre'].errors?.minlength"
+
+		3. Añadir en el componente el validador *Validators.minLength(3) al 
+			atributo *nombre
+
+		4. Añadir la directiva 	*ngClass al div *nombre
+			
+			- [ngClass]="{ 'text-danger': !forma.get('nombre').valid }"
+
+	
+	
 
 		
 

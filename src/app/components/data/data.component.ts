@@ -14,7 +14,10 @@ export class DataComponent {
   constructor() {
 
     this.forma = new FormGroup({
-      'nombre' : new FormControl('', Validators.required ), //Regla Validacion, Regla Validacion Asincrona
+      'nombre' : new FormControl('', [
+        Validators.required,
+        Validators.minLength(3)
+      ]), //Valor por defecto, Regla Validacion, Regla Validacion Asincrona
       'apellido' : new FormControl('', Validators.required ),
       'correo' : new FormControl('', [
         Validators.required,
