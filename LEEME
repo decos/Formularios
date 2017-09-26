@@ -279,6 +279,19 @@ FORMULARIOS EN ANGULAR
 		3. Modificar la vista y adaptarlo al nuevo objeto
 
 	
+	DATA: RESET Y CARGA DE LA DATA AL FORMULARIO A PARTIR DE UN OBJETO
+
+		1. Setear los datos
+			- this.forma.setValue( this.usuario );
+
+		2. Dejar los datos en su estado *pristine
+			- this.forma.reset( this.usuario );
+
+	
+	
+	
+
+	
 	
 
 		
