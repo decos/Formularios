@@ -229,11 +229,22 @@ FORMULARIOS EN ANGULAR
 		
 		- pending : Validacion asincrona que este pendiente de ejecutarse,
 				si no hay su valor es false.
+		
+		
+	DATA: ENLAZANDO INPUTS A PROPIEDADES DEL FormGroup y VALIDACIONES
+		
+		1. Agregar las relaciones para *nombre, *apellido, *correo
+			- formControlName=""
+			src/app/components/data/data.component.html
 
-
-
-
-
+		2. Quitar *novalidate de la etiqueta *form porque no se va poner
+			ningun required por defecto
+			src/app/components/data/data.component.html
+	
+		- Corregir, es *Validators, el paquete importado
+			src/app/components/data/data.component.ts
+		
+		- Añadir el *Validators.required a todas las propiedades del objeto *forma
 
 
 
