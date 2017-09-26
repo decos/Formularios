@@ -244,9 +244,14 @@ FORMULARIOS EN ANGULAR
 		- Corregir, es *Validators, el paquete importado
 			src/app/components/data/data.component.ts
 		
-		- Añadir el *Validators.required a todas las propiedades del objeto *forma
+		3. Añadir el *Validators.required a todas las propiedades del objeto *forma
 
+		4. Imprimir en la vista *forma.valid para observar el cambio
 
+		
+		
+
+		
 
 
 
