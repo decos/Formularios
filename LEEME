@@ -269,6 +269,15 @@ FORMULARIOS EN ANGULAR
 			
 			- [ngClass]="{ 'text-danger': !forma.get('nombre').valid }"
 
+
+	DATA: AGRUPACIONES DE LOS OBJETOS- formGroupName
+
+		1. Definir en el componente un componente llamado *nombrecompleto
+
+		2. Modificar el *FormGroup del componente
+
+		3. Modificar la vista y adaptarlo al nuevo objeto
+
 	
 	
 
