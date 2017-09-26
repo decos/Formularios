@@ -288,7 +288,19 @@ FORMULARIOS EN ANGULAR
 			- this.forma.reset( this.usuario );
 
 	
-	
+	DATA: ARREGLOS DE FormControl - FormArray
+
+		1. Importar el paquete *FormArray al componente
+
+		2. Agregar pasatiempos al *FormGroup forma
+
+		3. En la vista, añadir un input para colocar un pasatiempo
+		
+		- Añadir el boton *Nuevo despues del input creado
+
+		4. Añadir la funcion *agregarPasatiempo al componente
+
+		
 	
 
 	
