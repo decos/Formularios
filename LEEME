@@ -311,9 +311,28 @@ FORMULARIOS EN ANGULAR
 			el formulario con el fin de hacer pruebas
 
 
-	
+	DATA: VALIDAR QUE EL PASSWORD2 SEA IGUAL AL PASSWORD1
 
-	
+		1. Añadir dos controles al *formGroup llamado *forma
+			- password1
+			- password2
+
+		2. Añadir la validacion personalizada *noIgual
+
+		3. Añadir la validacion personalizada creada al control *password2
+
+		4. Añadir en la vista los dos *entradas de tipo password
+			- password1
+			- password2
+
+		BIND: funcion de Javascript
+		- Especificar a una funcion el elemento "this"
+
+		5. Añadir un BIND al validator de *password2
+
+		- Normalmente no tenemos que usar el BIND pero si usamos este contexto si
+			
+		6. Modificar la validaciones personalizada *noIgual
 	
 
 		

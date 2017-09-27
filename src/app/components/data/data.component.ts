@@ -42,13 +42,23 @@ export class DataComponent {
           Validators.required,
           Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")
       ]),
+
       'pasatiempos' : new FormArray([
           new FormControl('Dormir', Validators.required )
-      ])
+      ]),
+
+      'password1' : new FormControl('', Validators.required ),
+
+      'password2' : new FormControl()
     })
 
-
     //this.forma.setValue( this.usuario );
+
+    this.forma.controls['password2'].setValidators([
+      Validators.required,
+      this.noIGual.bind( this.forma )
+    ])
+
   }
 
   agregarPasatiempo(){
@@ -63,6 +73,24 @@ export class DataComponent {
     if( control.value === "herrera" ){
       return{
         noherrera:true
+      }
+    }
+    return null;
+  }
+
+  //VALIDACIONES PERSONALIDAZAS
+  //COMPARAR PASSWORDS
+  noIGual( control:FormControl): { [s:string]:boolean } {
+    // console.log(this)
+    // this dentro de esta funcion ya es this.forma
+    
+    //TRUCO
+    let forma:any = this;
+
+    //if( control.value !== this.forma.controls['password1'].value ){
+    if( control.value !== forma.controls['password1'].value ){
+      return{
+        noiguales:true
       }
     }
     return null;
