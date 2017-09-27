@@ -301,6 +301,16 @@ FORMULARIOS EN ANGULAR
 		4. Añadir la funcion *agregarPasatiempo al componente
 
 		
+	DATA: VALIDACIONES PERSONALIZADAS
+
+		1. Crear la funcion la validacion personalizada *noHerrera en el componente
+	
+		2. Asignar la validacion creada al control *apellido
+
+		- Comentar en la funcion *guardarCambios el codigo para que no resetee
+			el formulario con el fin de hacer pruebas
+
+
 	
 
 	

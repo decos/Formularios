@@ -32,7 +32,10 @@ export class DataComponent {
             Validators.minLength(3)
         ]), //Valor por defecto, Regla Validacion, Regla Validacion Asincrona
 
-        'apellido' : new FormControl('', Validators.required ),
+        'apellido' : new FormControl('', [
+          Validators.required,
+          this.noHerrera
+        ]),
       }),
 
       'correo' : new FormControl('', [
@@ -54,6 +57,17 @@ export class DataComponent {
     )
   }
 
+  //VALIDACIONES PERSONALIZADAS
+  noHerrera( control:FormControl): { [s:string]:boolean } {
+
+    if( control.value === "herrera" ){
+      return{
+        noherrera:true
+      }
+    }
+    return null;
+  }
+
   guardarCambios(){
     console.log( this.forma.value );
     console.log( this.forma );
@@ -62,6 +76,7 @@ export class DataComponent {
     //this.forma.reset( this.usuario );
 
     //Segunda forma
+    /*
     this.forma.reset({
       nombrecompleto:{
         nombre:"",
@@ -69,7 +84,7 @@ export class DataComponent {
       },
       correo:""
     });
-
+    */
   }
 
 
