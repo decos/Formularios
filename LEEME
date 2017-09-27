@@ -335,7 +335,44 @@ FORMULARIOS EN ANGULAR
 		6. Modificar la validaciones personalizada *noIgual
 	
 
-		
+	DATA: VALIDADORES ASÍNCRONOS
+
+		- Son muy utiles cuando la data no esta disponible en ese preciso momento
+			que lo necesitamos.
+
+		1. Crear nuevo form control *username
+
+		2. Añadir a la vista la *entrada de tipo texto 
+			- username
+
+		3. Añadir al componente el metodo *existeUsuario
+			
+		4. Añadir la validacion asincrona al control *username
+
+		5. Añadir a la vista lo siguiente, para observar el comportamiento asincrono
+			- {{ forma.status }}
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
