@@ -354,7 +354,17 @@ FORMULARIOS EN ANGULAR
 
 
 	
+	DATA: DETECTAR CAMBIOS EN LOS VALORES O ESTADO DEL FORMULARIO O UN CONTROL
 
+		1. Crear un observador en el constructor para que este atento
+			a los cambios de la data
+	
+		2. Agregar dos observadores:
+			- valueChanges (Atento a los cambios)
+			- statusChanges (Atento al status)
+
+
+	
 
 
 
