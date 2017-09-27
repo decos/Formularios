@@ -364,7 +364,44 @@ FORMULARIOS EN ANGULAR
 			- statusChanges (Atento al status)
 
 
-	
+	PREGUNTAS:
+		1. En el manejo de los formularios por el Template, 
+			¿Angular crea el ngForm por nosotros en caso de que la necesitemos?
+		- SI
+
+		2. Para evaluar una caja de texto y que cumpla un patrón, ¿Qué podemos utilizar?
+		- UNA EXPRESION REGULAR
+
+		3. Para la aproximación por Template, ¿Es necesario importar ReactiveFormsModule?
+		- FALSO
+
+		4. ¿Qué es el estado pristine en un input?
+		- SIGNIFICA QUE EL INPUT TIENE EL VALOR INICIAL Y NO HA SIDO MODIFICADO
+
+		5. ¿Qué es una validación asíncrona ?
+		- ES UNA VALIDACION QUE SE EJECUTA Y ESPERA LA RESPUESTA PARA PODER COMPROBAR
+			SI PASA LA VALIDACION O NO
+
+		6. ¿Qué tipo de objeto puede aceptar un FormControl en la parte 
+			de las validaciones?
+		- UNA FUNCION
+
+		
+		7. ¿Cómo podemos detectar cambios en el valor de algún input?
+		- NOS SUBSCRIBIMOS AL OBSERVADOR "valueChanges" del control
+
+		8. ¿Cómo podemos hacer un reset del formulario con la aproximación del template?
+		- CREAMOS LA REFERENCIA LOCAL A LA FORMA (#forma), Y LUEGO PODEMOS LLAMAR
+			EL RESET DE LA MISMA
+
+		9. Si utilizamos el ngModel en un input, ¿qué debemos importar en el módulo?
+		- FormsModule
+
+		10. ¿Cómo relacionamos en la aproximación por data, un input con una 
+			propiedad del FormGroup?
+		- AGREGAMOS AL ATRIBUTO formControlName AL INPUT
+
+
 
 
 
